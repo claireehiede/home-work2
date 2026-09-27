@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>A Simple HospitalScene</title> 
+        <script src= 
+        "https://aframe.io/releases/1.7.0/aframe.min.js"> 
+    </script>
+    </head>
+    <body> 
+        <a-scene> 
+            <a-assets>
+    <img id="grass-base" src="assets\Cobblestone_Irregular_Floor_001_basecolor.png">
+    <img id="grass-ambient-occlusion" src="assets\Cobblestone_Irregular_Floor_001_ambientOcclusion.png">
+    <img id="grass-normal" src="assets\Cobblestone_Irregular_Floor_001_normal.png.">
+    <img id="sphericaltreeleaves-base" src="assets\Foliage_Lilypads_001_BaseColor.jpg">
+    <img id="sphericaltreeleaves-ambient-occlusion" src="assets\Foliage_Lilypads_001_AmbientOcclusion.jpg">
+    <img id="sphericaltreeleaves-normal" src="assets\Foliage_Lilypads_001_Normal.jpg">
+    <img id="conicaltreeleaves-base" src="assets\Metal_Guard_Roses_001_basecolor.jpg">
+    <img id="conicaltreeleaves-ambient-occlusion" src="assets\Metal_Guard_Roses_001_ambientOcclusion.jpg">
+    <img id="conicaltreeleaves-normal" src="assets\Metal_Guard_Roses_001_normal.jpg">
+    <img id="treetrunk-base" src="assets\Bark_06_basecolor.jpg">
+    <img id="treetrunk-ambient-occlusion" src="assets\Bark_06_ambientOcclusion.jpg">
+    <img id="treetrunk-normal" src="assets\Bark_06_normal.jpg">
+    <img id="sky" src="assets\istockphoto-1984127891-1024x1024.jpg">
+    
+</a-assets>  
+            <a-plane 
+            material= "src: #grass-base;
+             repeat: 500 500;
+              ambientOcclusionMap: #grass-ambient-occlusion;
+               ambientOcclusionTextureRepeat: 500 500;
+                normalMap: #grass-normal; 
+                normalTextureRepeat: 500 500"
+            color="silver" 
+            position="0 0 0"
+             rotation="-90 0 0"
+              width="500"
+               height="500" 
+               >
+             </a-plane>
+              <a-sky 
+              src="#sky"
+              > 
+            </a-sky>
+            <a-mixin
+            id="wallcolor"
+            color="mintcream"
+            >
+        </a-mixin>
+        <a-box
+        mixin="wallcolor"
+        position="0 1.5 -16"
+        rotation="0 0 0"
+        width="10"
+        height="5"
+        depth="0.1"
+        >
+    </a-box>
+    <a-box
+    mixin="wallcolor"
+    position="-5 1.5 -11"
+    rotation="0 90 0"
+    width="10"
+    height="5"
+    depth="0.1"
+    >
+</a-box>
+<a-box
+mixin="wallcolor"
+position="5 1.5 -11"
+rotation="0 90 0"
+width="10"
+height="5"
+depth="0.1"
+>
+</a-box>
+<a-box
+mixin="wallcolor"
+position="-2.875 1.5 -6"
+rotation="0 0 0"
+width="4.25"
+height="5"
+depth="0.1"
+>
+</a-box>
+<a-box
+mixin="wallcolor"
+position="2.875 1.5 -6"
+rotation="0 0 0"
+width="4.25"
+height="5"
+depth="0.1"
+>
+</a-box>
+<a-box
+mixin="wallcolor"
+position="0 2.75 -6"
+rotation="0 0 0"
+width="1.5"
+height="2.5"
+depth="0.1"
+>
+</a-box>
+<a-box
+color="gray"
+position="0 0 -11"
+width="10"
+depth="10"
+height="0.1"
+>
+</a-box>
+<a-box
+color="red"
+position="0 4 -11"
+width="12"
+depth="12"
+height="0.25"
+>
+</a-box>
+<a-mixin
+id="treetrunk"
+material = "src: #treetrunk-base; repeat: 3 5; 
+ambientOcclusionMap: #treetrunk-ambient-occlusion;
+ ambientOcclusionTextureRepeat: 3 5; 
+ normalMap: #treetrunk-normal;
+  normalTextureRepeat: 3 5"
+geometry="radius:0.2; height:3"
+>
+</a-mixin>
+<a-cylinder
+mixin="treetrunk"
+position="-8 1 -7"
+>
+</a-cylinder>
+<a-cylinder
+mixin="treetrunk"
+position="-3 1 -1"
+>
+</a-cylinder>
+<a-cylinder
+mixin="treetrunk"
+position="8 1 -6"
+>
+</a-cylinder>
+<a-cylinder
+mixin="treetrunk"
+position="4 1 -2"
+>
+</a-cylindermixin>
+</a-cylinder>
+<a-mixin
+id="conicaltreeleaves"
+material = "src: #conicaltreeleaves-base; repeat: 2 2; 
+ambientOcclusionMap: #conicaltreeleaves-ambient-    occlusion;
+ ambientOcclusionTextureRepeat: 2 2;
+  normalMap: #conicaltreeleaves-normal;
+   normalTextureRepeat: 2 2;"
+geometry="radius-bottom:1; height:3"
+>
+</a-mixin>
+<a-cone
+mixin="conicaltreeleaves"
+position="-8 2.25 -7"
+>
+</a-cone>
+<a-cone
+mixin="conicaltreeleaves"
+position="4 2.25 -2"
+>
+</a-cone>
+<a-mixin
+id="sphericaltreeleaves"
+material = "src: #sphericaltreeleaves-base; 
+repeat: 8 8; ambientOcclusionMap: #sphericaltreeleaves-ambient-   occlusion; 
+ambientOcclusionTextureRepeat: 8 8; 
+normalMap: #sphericaltreeleaves-normal;
+ normalTextureRepeat: 8 8;"
+geometry="radius:1"
+>
+</a-mixin>
+<a-sphere
+mixin="sphericaltreeleaves"
+position="-3 2 -1"
+>
+</a-sphere>
+<a-sphere
+mixin="sphericaltreeleaves"
+position="8 2 -6"
+>
+</a-sphere>
+<a-plane
+color="red"
+position="3 2.5 -5"
+rotation="-2.5 0 0"
+width="2"
+height="2"
+>
+</a-plane>
+<a-text
+value="Hospital"
+color="white"
+position="2 3 -5"
+width="11"
+>
+</a-text>
+
+         </a-scene>
+        </body>
+        </html>
