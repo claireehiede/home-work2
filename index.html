@@ -22,6 +22,9 @@
     <img id="treetrunk-ambient-occlusion" src="assets\Bark_06_ambientOcclusion.jpg">
     <img id="treetrunk-normal" src="assets\Bark_06_normal.jpg">
     <img id="sky" src="assets\istockphoto-1984127891-1024x1024.jpg">
+    <img id="moon-base" src="assets\Moon_001_COLOR.jpg">
+    <img id="moon-normal" src="assets\Moon_001_NORM.jpg">
+    <img id="moon-ambient-occlusion" src="assets\Moon_001_OCC.jpg">
     
 </a-assets>  
             <a-plane 
@@ -38,6 +41,94 @@
                height="500" 
                >
              </a-plane>
+             <a-sphere
+             material = "src: #Moon-base;
+              repeat: 8 8; 
+             ambientOcclusionMap: #moon-ambient-occlusion;
+              ambientOcclusionTextureRepeat: 8 8; 
+normalMap: #Moon-normal;
+ normalTextureRepeat: 8 8;"
+             position="30 30 -50"
+             radius="2"
+             >
+            </a-sphere>
+<a-box
+color="powderblue"
+position="-3 0 -13"
+rotation="0 360 0"
+width="4"
+height="1"
+depth="3"
+>
+</a-box>
+<a-box
+color="peru"
+position="-3 1 -15"
+rotation="0 360 0"
+width="4"
+height="2"
+depth="1"
+>
+</a-box>
+</a-box>
+<a-box
+color="linen"
+position="-2 1 -14.2"
+rotation="0 360 0"
+width="2"
+height="1"
+depth="0.5"
+>
+</a-box>
+<a-box
+color="linen"
+position="-4 1 -14.2"
+rotation="0 360 0"
+width="2"
+height="1"
+depth="0.5"
+>
+</a-box>
+</a-box>
+<a-box
+color="peru"
+position="0.5 0 -15"
+rotation="0 360 0"
+width="2.5"
+height="2.5"
+depth="2.1"
+>
+</a-box>
+<a-cylinder
+color="silver"
+position="0.5 1.5 -15"
+rotation="180 0 0"
+radius="0.1"
+height="0.5"
+>
+</a-cylinder>
+<a-cone
+color="powderblue"
+position="0.5 2 -15"
+rotation="0 0 0"
+radius-bottom="0.45"
+height="1"
+>
+</a-cone>
+<a-sphere
+color="powderblue"
+position="3 3 -16"
+radius="0.5"
+>
+</a-sphere>
+<a-text
+value="11:28 am"
+color="black"
+position="2.5 3 -15.5"
+width="4.3"
+>
+</a-text>
+
               <a-sky 
               src="#sky"
               > 
